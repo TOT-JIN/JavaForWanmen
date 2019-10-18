@@ -1,0 +1,41 @@
+package com.dataapplab.ecommerce;
+/**
+ * we create our first servlet application 
+ * https://jcp.org/aboutJava/communityprocess/mrel/jsr245/index2.html
+ * https://jcp.org/aboutJava/communityprocess/final/jsr369/index.html
+ * https://kodejava.org/how-do-i-define-a-servlet-with-webservlet-annotation/
+ * 
+ * @WebServlet(
+ *       name = "HomeServlet",
+ *       description = "This is my first annotated servlet",
+ *       urlPatterns = "/home.do"
+ * 
+ * )
+ */
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet(urlPatterns = "/home")
+public class HomeServlet extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		//response.setContentType("text/html;charset=utf-8");
+		PrintWriter out = response.getWriter(); // ISO8859-1
+		out.println("<html>");
+		out.println("<head>");
+		out.println("<title>Data Application Lab!!!!!!!!</title>");
+		out.println("</head>");
+		out.println("<body>");
+		out.println("My First Servlet 中文");
+		out.println("</body>");
+		out.println("</html>");
+	}
+
+}

@@ -1,0 +1,14 @@
+.container{
+    margin: 0 auto;width:85%;max-width:365px;
+    color:blue;
+}
+
+.bigblue{
+    color:blue;
+	font-size: 30px;	
+}
+
+#title{
+    color:blue;
+	font-size: 30px;	
+}

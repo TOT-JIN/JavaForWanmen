@@ -1,0 +1,5 @@
+package com.dataapplab.spring.basic;
+
+public class SpringXmlApplication {
+
+}

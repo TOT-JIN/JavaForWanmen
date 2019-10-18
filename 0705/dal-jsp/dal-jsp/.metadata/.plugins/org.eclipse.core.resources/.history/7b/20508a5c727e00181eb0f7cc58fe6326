@@ -1,0 +1,10 @@
+package com.dataapplab.springboot.api;
+/**
+ * 
+ * @author joshuaz
+ *
+ */
+public interface View {
+	interface Summary {}
+
+}

@@ -1,0 +1,6 @@
+package com.dataapplab.spring.basic.springaop;
+
+public class Order {
+	private String orderNumber;
+
+}

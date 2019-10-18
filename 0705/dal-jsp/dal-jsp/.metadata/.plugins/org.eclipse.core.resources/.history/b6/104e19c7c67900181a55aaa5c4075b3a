@@ -1,0 +1,24 @@
+package com.dataapplab.spring.basic;
+
+import com.dataapplab.spring.basic.algorithm.*;
+import org.springframework.context.ApplicationContext;
+
+
+public class SpringAlgorithmApplication {
+	public static void main(String[] args){
+        // ask spring to initial beans
+		// what are beans
+		// what are the dependency of beans
+		// where to search beans
+		
+		//BinarySearchImpl search = new BinarySearchImpl(new QuickSortAlgorithm());
+		//int result = search.binarySearch(new int[]{12,4,6, 3}, 3);
+		
+        ApplicationContext context = 
+                new AnnotationConfigApplicationContext(KnightConfig.class);
+
+		
+		System.out.println(result);
+		
+	}
+}

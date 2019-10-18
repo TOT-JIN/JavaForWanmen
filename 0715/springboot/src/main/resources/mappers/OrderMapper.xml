@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.dataapplab.springboot.order.OrderMapper">
+	
+	<insert id="insertOrderItems">
+		INSERT INTO `order_item`
+		(`sku_id`,`order_id`,`unit_price`,`quantity`,`create_date`,`modified_date`)
+		VALUES
+	  <foreach item="item" collection="list" separator=",">
+	     	(#{item.sku.id},#{item.order.id},#{item.unitPrice},#{item.quantity},now(),now())
+	  </foreach>
+	</insert>	
+</mapper>

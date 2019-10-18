@@ -1,0 +1,8 @@
+package com.dataapplab.ecommerce;
+
+import java.io.Serializable;
+
+public class SampleBean implements Serializable {
+
+	
+}

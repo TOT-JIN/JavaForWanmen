@@ -1,0 +1,33 @@
+package com.dataapplab.spring.basic;
+
+import com.dataapplab.spring.basic.algorithm.*;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+/**
+ * 
+ * @author joshuaz
+ * 组装你的Application
+ */
+public class SpringXmlApplication {
+
+	private static Logger logger = LoggerFactory.getLogger(SpringXmlApplication.class);
+	
+	public static void main(String[] args){
+		try (ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext(
+				"applicationContext.xml")) {
+
+			logger.info("Beans Loaded -> {}", (Object) applicationContext.getBeanDefinitionNames());
+			// [xmlJdbcConnection, xmlPersonDAO]
+
+			BinarySearchImpl search = applicationContext.getBean(BinarySearchImpl.class);
+
+			int result = search.binarySearch(new int[]{12,4,6, 3}, 3);
+
+		}
+		
+	}
+}

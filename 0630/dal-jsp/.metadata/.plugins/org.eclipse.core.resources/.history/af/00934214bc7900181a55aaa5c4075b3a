@@ -1,0 +1,7 @@
+package com.dataapplab.spring.basic;
+
+public class SpringAlgorithmApplication {
+	public static void main(String[] args){
+		
+	}
+}

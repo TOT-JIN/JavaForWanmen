@@ -1,0 +1,11 @@
+INDEX VERSION 1.130
+F:\6.28\projects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\988489870.index
+\dal-servlet\src\main\java
+F:\6.28\projects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3857402420.index
+\dalservlet\src\main\java
+F:\6.28\projects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2748312226.index
+\dal-servlet\src\main\java
+F:\6.28\projects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1566764531.index
+\dalservlet\src\main\java
+F:\6.28\projects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2874533895.index
+\dalservlet\src\main\java

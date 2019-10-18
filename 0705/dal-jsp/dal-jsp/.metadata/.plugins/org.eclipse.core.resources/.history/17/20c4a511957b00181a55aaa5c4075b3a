@@ -1,0 +1,8 @@
+package com.dataapplab.spring.basic.dessignpattern.frontcontroller;
+
+import java.lang.annotation.ElementType;
+
+@Target(ElementType.METHOD)
+public class Test {
+
+}

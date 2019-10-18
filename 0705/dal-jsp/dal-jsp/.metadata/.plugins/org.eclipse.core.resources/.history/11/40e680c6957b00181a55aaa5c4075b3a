@@ -1,0 +1,16 @@
+package com.dataapplab.spring.basic.dessignpattern.frontcontroller;
+
+/**
+ * 
+ * Information for the compiler — Annotations can be used by the compiler to detect errors or suppress warnings.
+ * Compile-time and deployment-time processing — Software tools can process annotation information to generate code, XML files, and so forth.
+ * Runtime processing — Some annotations are available to be examined at runtime.
+ */
+import java.lang.annotation.ElementType;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+public @interface BugReport {
+	String[] reportBy() default {};
+	Reference ref() default @Reference(id=0);
+}

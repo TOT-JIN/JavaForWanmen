@@ -1,0 +1,252 @@
+<html>
+<head>
+<title>CSS Example</title>
+<style type="text/css">
+#example div{
+  display: inline-block;
+  margin: 10px;
+  padding: 2px;
+  width: 90px;
+  height: 90px;
+  border: 3px solid #a00;
+  background-color: red;
+  color: white;  
+}
+
+/*second*/
+#second{
+  position: relative;
+  top: 20px;
+  left: 20px;  
+}
+
+#example div{
+  display: inline-block;
+  margin: 10px;
+  padding: 2px;
+  width: 90px;
+  height: 90px;
+  border: 3px solid #a00;
+  background-color: red;
+  color: white;  
+}
+
+/*third*/
+
+#second{
+  position: absolute;
+  top: 30px;
+  left: 30px;  
+}
+
+#example {
+  padding: 10px;
+}
+
+#example div{
+  display: inline-block;
+  margin: 10px;
+  padding: 2px;
+  width: 100px;
+  height: 100px;
+  border: 3px solid #a00;
+  background-color: red;
+  color: white;  
+}
+
+/*forth*/
+body {
+  position: relative;
+}
+
+#second{
+  position: absolute;
+  top: 30px;
+  left: 30px;  
+}
+
+#example {
+  padding: 10px;
+}
+
+#example div{
+  display: inline-block;
+  margin: 10px;
+  padding: 2px;
+  width: 90px;
+  height: 90px;
+  border: 3px solid #a00;
+  background-color: red;
+  color: white;  
+}
+h2 {
+    border-style: dashed;
+    border-width: 3px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-color: red;
+}
+
+/*CSS flexbox and grid can be very useful for creating page layout.*/
+#top {
+    background-color: #ccc;
+    padding: 20px
+}
+
+.intro {
+    color: red;
+    font-weight: bold;
+}
+
+/*grouping*/
+h2 {
+    color: red;
+}
+
+.thisOtherClass {
+    color: red;
+}
+
+.yetAnotherClass {
+    color: red;
+}
+
+/*nesting */
+#top {
+    background-color: #ccc;
+    padding: 1em
+}
+
+#top h1 {
+    color: #ff0;
+}
+
+#top p {
+    color: red;
+    font-weight: bold;
+}
+
+/*Pseudo classes selector:pseudo_class { property: value; },*/
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:active {
+    color: red;
+}
+
+a:hover {
+    text-decoration: none;
+    color: blue;
+    background-color: yellow;
+}
+
+input:focus, textarea:focus {
+    background: #eee;
+}
+
+#child p{
+    font-weight: bold;
+    font-size: 40px;
+}
+#child p:first-child{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+/*margin*/
+p {
+    margin-top: 1px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin: 1px 5px 10px 20px;    
+}
+p {
+    border-width: 1px;
+    border-color: red;
+    border-style: solid;
+    border: 1px red solid;
+    font: italic bold 12px/2 courier;        
+}
+
+p {
+    font: 14px/1.5 "Times New Roman", times, serif;
+    padding: 30px 10px;
+    border: 1px black solid;
+    border-width: 1px 5px 5px 1px;
+    border-color: red green blue yellow;
+    margin: 10px 50px;
+}
+
+body {
+    background: white url(http://cn.dataapplab.com/wp-content/uploads/2017/04/cropped-DAL_Flat_LogoOnly_Sauqre_78px.png) no-repeat top right;  /*repeat-x, repeat-y */
+}
+
+/*Pseudo Elements*/
+#firstletter p {
+    font-size: 12px;
+}
+
+#firstletter p::first-letter {
+    font-size: 24px;
+    float: left;
+}
+#firstletter p:first-line {
+    font-weight: bold;
+}
+
+blockquote:before {
+    content: open-quote;
+}
+
+blockquote:after {
+    content: close-quote;
+}
+
+li:before {
+    content: "POW! ";
+}
+
+p:before {
+    content: url(http://cn.dataapplab.com/wp-content/uploads/2017/04/cropped-DAL_Flat_LogoOnly_Sauqre_78px.png);
+}
+li:before {
+    content: "POW! ";
+    background: red;
+    color: #fc0;
+}
+</style>
+
+
+</head>
+<body>
+<div id="example">
+  <div>First</div>
+  <div id="second">Second</div>
+  <div>Third</div>
+</div>
+
+<div id="top">
+
+<h1>Chocolate curry</h1>
+
+<p class="intro">This is my recipe for making curry purely with chocolate</p>
+
+<p class="intro">Mmm mm mmmmm</p>
+
+</div>
+
+<div id ="child">
+    <p>I’m the body’s first paragraph child. I rule. Obey me.</p>
+    <p>I resent you.</p>
+</div>
+
+<div id="firstletter"><p>As an example, you could create drop caps and a bold first-line for paragraphs with something like this:</p></div>
+
+</body>
+</html>

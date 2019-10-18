@@ -1,0 +1,6 @@
+package com.dataapplab.spring.basic.springaop;
+
+@Component
+public class OrderDao {
+
+}

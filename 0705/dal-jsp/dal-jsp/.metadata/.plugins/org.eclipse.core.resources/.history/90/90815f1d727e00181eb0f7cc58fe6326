@@ -1,0 +1,71 @@
+package com.dataapplab.springboot.api;
+ 
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+ 
+import javax.annotation.PostConstruct;
+ 
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+ 
+import com.fasterxml.jackson.annotation.JsonView;
+import com.dataapplab.springboot.product.*;
+
+@RestController
+@RequestMapping("/api")
+public class OpenController {
+ 
+	private Product iphone7;
+	private Product iPadPro;
+	
+	@PostConstruct
+	public void initial(){
+		iphone7 = new Product(1, "Iphone 7", new Bignew BigDecimal("0.0"));
+        iPadPro = new Product(2, "IPadPro");
+        
+        List<Product> appleProducts = new ArrayList<Product>(Arrays.asList(iphone7, iPadPro));
+        
+        apple = new Company(1, "Apple", appleProducts);
+        
+        iphone7.setCompany(apple);
+        iPadPro.setCompany(apple);
+	}
+	
+	/*
+	 * URLs MAKE ERRORS {'/get/company', '/get/product'}
+	 */
+	@GetMapping("/company")
+	public Company getCompany(){
+		return apple; 
+	}
+	
+	@GetMapping("/product")
+	public Product getProduct(){
+		return iphone7; 
+	}
+	
+	/*
+	 * Get Customized Views {'/get/company/overalview', '/get/company/detailview', '/get/product/view'}
+	 */
+	@JsonView(View.OveralView.class)
+	@GetMapping("/company/overalview")
+	public Company getOveralViewCompany(){
+		return apple; 
+	}
+	
+	@JsonView(View.DetailView.class)
+	@GetMapping("/company/detailview")
+	public Company getDetailViewCompany(){
+		return apple; 
+	}
+	
+	@JsonView(View.ProductView.class)
+	@GetMapping("/product/view")
+	public Product getProductView(){
+		return iphone7; 
+	}
+ 
+}

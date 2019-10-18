@@ -1,0 +1,31 @@
+package com.dataapplab.spring.basic.springaop;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.context.annotation.Configuration;
+
+//AOP
+//Configuration
+@Aspect
+@Configuration
+public class UserAccessAspect {
+	
+	//What kind of method calls I would intercept
+	//execution(* PACKAGE.*.*(..))
+	//Weaving & Weaver
+	public void before(JoinPoint joinPoint){
+		//Advice
+	    System.out.println("check for user access before, allow user to access");
+	}
+	
+	public void after(JoinPoint joinPoint){
+		//Advice
+	    System.out.println("after user access, we need to clean something");
+	}
+	
+	public void afterReturning(JoinPoint joinPoint){
+		//Advice
+	    System.out.println("after user access, we need to clean something");
+	}
+
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.dataapplab.springboot.product.CategoryOldMapper">
+
+	<resultMap type="Product" id="ProductResult">
+  		<id property="id" column="product_id"/>
+		<result property="name" column="product_name"/>
+		<result property="detail" column="detail"/>
+		<result property="imageUrl" column="image_url"/>
+		<result property="price" column="price"/>
+		<result property="status" column="status"/>
+		<result property="createDate" column="create_date"/>
+		<result property="modifiedDate" column="modified_date"/>
+  	</resultMap>
+
+	<resultMap type="Category" id="CategoryResult">
+  		<id property="id" column="category_id"/>
+		<result property="name" column="category_name"/>
+		<result property="displayOrder" column="display_order"/>
+		<result property="createDate" column="create_date"/>
+		<result property="modifiedDate" column="modified_date"/>
+  	</resultMap>  	
+  	
+	<resultMap type="Category" id="CategoryResultWithChildren">
+  		<id property="id" column="category_id"/>
+		<result property="name" column="category_name"/>
+		<result property="displayOrder" column="display_order"/>
+		<result property="createDate" column="create_date"/>
+		<result property="modifiedDate" column="modified_date"/>
+  		<collection property="children" column="parent_id" javaType="ArrayList" ofType="Category" 
+  		select="getChildrenCategory" ></collection>		  		
+  	</resultMap>  	
+
+     <select id="getCategory" parameterType="int" resultType="Category" resultMap="CategoryResult">  
+        select category_id, name as category_name, display_order, parent_id from category.
+    </select>   	
+  	
+     <select id="getChildrenCategory" parameterType="int" resultType="Category" resultMap="CategoryResult">  
+        select category_id, name as category_name, display_order FROM category  where parent_id = #{id}
+    </select>   	
+  	
+	<resultMap type="Category" id="CategoryResultWithProducts">
+  		<id property="id" column="category_id"/>
+		<result property="name" column="category_name"/>
+		<result property="displayOrder" column="display_order"/>
+		<result property="createDate" column="create_date"/>
+		<result property="modifiedDate" column="modified_date"/>
+  		<collection property="products" javaType="ArrayList" ofType="Product" 
+  		resultMap="ProductResult" ></collection>		  		
+  	</resultMap>
+</mapper>

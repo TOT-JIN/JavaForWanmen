@@ -1,0 +1,11 @@
+package com.dataapplab.springboot.api;
+/**
+ * 
+ * @author joshuaz
+ *https://spring.io/blog/2014/12/02/latest-jackson-integration-improvements-in-spring	
+ *http://javasampleapproach.com/java-integration/integrate-spring-restapis-jsonview
+ */
+public interface View {
+	interface Summary {}
+
+}

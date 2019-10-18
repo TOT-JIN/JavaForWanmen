@@ -1,0 +1,18 @@
+package com.dataapplab.springboot.product;
+
+import java.math.BigDecimal;
+
+public class Product {
+    private int id, sale, score;
+	private String sku;
+	private String name;
+	private String description;
+	private String imageUrl;
+	private boolean disabled;
+	private Date createdOn = new Date();
+
+    String title, catalog, thumbnail, tag, detail;
+    BigDecimal price;
+
+   
+}

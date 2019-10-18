@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+<title>Data Application Lab!!</title>
+</head>
+<body>
+	<p><font color="red">${errorMessage}</font></p>
+	<form action="/login.do" method="POST">
+		Name : <input name="name" type="text" /> Password : <input name="password" type="password" /> <input type="submit" />
+	</form>
+<form action="subscribe.html" th:attr="action=@{/subscribe}">
+  <fieldset>
+    <input type="text" name="email" />
+    <input type="submit" value="Subscribe me!" th:attr="value=#{subscribe.submit}"/>
+  </fieldset>
+</form>
+	
+</body>
+</html>

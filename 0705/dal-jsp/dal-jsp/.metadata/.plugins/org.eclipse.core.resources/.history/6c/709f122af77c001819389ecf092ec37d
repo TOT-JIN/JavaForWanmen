@@ -1,0 +1,30 @@
+package com.buaa.staticEx;
+
+public class ClassExample {
+	
+	public ClassExample() {
+		System.out.println("123");
+	}
+	
+	{
+		System.out.println("345");
+	}
+	static {
+		System.out.println("789");
+	}
+	
+	public static void test() {
+			System.out.println("abc");
+	}
+	
+	public static void main(String[] args) {
+		ClassExample c1 = new ClassExample();
+		test();
+		
+		ClassExample c2 = new ClassExample();
+		test();
+		
+		ClassExample c3 = new ClassExample();
+		test();
+	}
+}

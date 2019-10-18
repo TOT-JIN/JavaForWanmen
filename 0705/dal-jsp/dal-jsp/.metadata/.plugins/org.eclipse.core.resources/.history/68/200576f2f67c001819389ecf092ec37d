@@ -1,0 +1,27 @@
+package com.buaa.staticEx;
+
+public class PuTong {
+	public PuTong() {
+		System.out.print("Ĭ�Ϲ��췽����-->");/////
+	}
+	// �Ǿ�̬�����
+	{
+		System.out.print("�Ǿ�̬����飡-->");
+	}
+	// ��̬�����
+	static {
+		System.out.print("��̬����飡-->");
+	}
+   //��̬��Ա����
+	public static void test() {////////////
+			System.out.println("��ͨ�����еĴ���飡");////
+	}
+	public static void main(String[] args) {
+		PuTong c1 = new PuTong();
+		test();
+		PuTong c2 = new PuTong();/////////
+		test();
+		PuTong c3 = new PuTong();/////////
+		test();
+	}
+}

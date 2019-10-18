@@ -1,0 +1,6 @@
+package com.dataapplab.springboot.api;
+
+public interface View {
+	interface Summary {}
+
+}

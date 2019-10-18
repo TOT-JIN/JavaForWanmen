@@ -1,0 +1,29 @@
+package com.dataapplab.spring.basic;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.dataapplab.spring.basic.algorithm.AlgorithmConfig;
+
+import 
+
+public class SpringAopApplication{
+	
+	@Autowired
+	private Business1 business1;
+
+	@Autowired
+	private Business2 business2;
+	
+	public static void main(String[] args) {
+        ApplicationContext context = 
+                new AnnotationConfigApplicationContext(AlgorithmConfig.class);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		logger.info(business1.calculateSomething());
+		logger.info(business2.calculateSomething());
+	}
+}

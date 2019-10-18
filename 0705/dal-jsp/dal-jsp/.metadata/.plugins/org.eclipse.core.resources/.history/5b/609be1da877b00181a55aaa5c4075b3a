@@ -1,0 +1,22 @@
+package com.dataapplab.knights;
+
+import java.util.Arrays;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Bean;
+
+@SpringBootApplication
+public class KnightAopMain {
+
+    public static void main(String[] args) {
+        ApplicationContext context = 
+            new AnnotationConfigApplicationContext(KnightAopConfig.class);
+        Knight knight = context.getBean(Knight.class); 
+        knight.embarkOnQuest(); 
+    }
+
+}

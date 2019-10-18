@@ -1,0 +1,45 @@
+package com.buaa.staticEx;
+
+public class ClassExample {
+	
+	//静态变量
+	static int a = 0;
+
+	//构造函数
+	public ClassExample() {
+		System.out.println("constructor");
+	}
+	
+	//普通代码块
+	{
+		System.out.println("block");
+	}
+	
+	//静态代码块
+	static {
+		a++;
+		System.out.println("static block");
+
+		public void test2() {
+			System.out.println("test method");
+			System.out.println(a);
+	}
+	
+	//静态函数
+	public static void test() {
+			System.out.println("test method");
+			System.out.println(a);
+			
+	}
+	
+	public static void main(String[] args) {
+		ClassExample c1 = new ClassExample();
+		test();
+		
+		ClassExample c2 = new ClassExample();
+		test();
+		
+		ClassExample c3 = new ClassExample();
+		test();
+	}
+}

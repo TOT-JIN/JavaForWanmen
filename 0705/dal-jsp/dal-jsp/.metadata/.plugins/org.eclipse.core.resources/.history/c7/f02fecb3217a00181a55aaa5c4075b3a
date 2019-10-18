@@ -1,0 +1,22 @@
+package com.dataapplab.spring.basic.springaop;
+
+import java.util.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class OrderService {
+	
+	@Autowired
+	private OrderDao dao;
+	
+	
+	public String calculateTotalSales(){
+		//Business Logic
+		List<Order> allOrders = dao.getAllOrders();
+		
+	    int asum = allOrders.stream().forEach(System.out::println).reduce(accumulator)   			
+			
+		return value;
+	}
+}

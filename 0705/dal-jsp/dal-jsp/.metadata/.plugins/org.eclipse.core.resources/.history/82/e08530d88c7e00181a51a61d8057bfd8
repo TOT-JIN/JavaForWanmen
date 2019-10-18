@@ -1,0 +1,19 @@
+package com.dataapplab.springboot.security;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+
+@Controller
+@RequestMapping("/login")
+public class LoginCotroller {
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public void add(@RequestBody User person) {
+        // ...
+    }
+}

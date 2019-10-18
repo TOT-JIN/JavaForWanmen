@@ -1,0 +1,32 @@
+package com.dataapplab.spring.basic.springaop;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.springframework.context.annotation.Configuration;
+
+//AOP
+//Configuration
+@Aspect
+@Configuration
+public class UserAccessAspect {
+	
+	//What kind of method calls I would intercept
+	//execution(* PACKAGE.*.*(..))
+	//Weaving & Weaver
+	
+	@Before("execution(* com.dataapplab.spring.basic.springaop.OrderService.*(..))")
+	@Before("com.dataapplab.spring.basic.springaop.CommonJoinPointConfig.dataLayerExecution()")	
+	public void before(JoinPoint joinPoint){
+		//Advice what to do
+	    System.out.println("check for user access "+ joinPoint+ " before , allow user to access");
+	}
+
+	@Before("execution(* com.dataapplab.spring.basic.springaop.OrderService.calculateTotalSales(..))")
+	public void beforeCalculateSales(JoinPoint joinPoint){
+		//Advice what to do
+	    System.out.println("check for CalculateSales access "+joinPoint);
+	}
+
+}

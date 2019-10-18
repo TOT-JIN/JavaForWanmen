@@ -1,0 +1,5 @@
+package com.dataapplab.spring.basic.mvc;
+@Configuration
+@EnableWebMvc
+public class WebConfig {
+}

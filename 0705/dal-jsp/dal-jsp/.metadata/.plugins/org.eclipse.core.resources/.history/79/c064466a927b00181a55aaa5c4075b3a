@@ -1,0 +1,6 @@
+package com.dataapplab.spring.basic.dessignpattern.singleton.frontcontroller;
+
+public interface View {
+
+  void display();
+}

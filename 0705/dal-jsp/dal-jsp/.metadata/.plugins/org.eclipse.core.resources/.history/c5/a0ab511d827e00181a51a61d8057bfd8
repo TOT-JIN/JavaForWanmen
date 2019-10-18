@@ -1,0 +1,21 @@
+package com.dataapplab.springboot;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+/**
+ * 
+ * @author joshuaz
+ * 
+ * @SpringBootApplication  can be used to enable those three features, that is:
+ * @EnableAutoConfiguration
+ * @ComponentScan
+ * @Configuration
+ *
+ */
+@SpringBootApplication
+public class SpringbootApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringbootApplication.class, args);
+	}
+}

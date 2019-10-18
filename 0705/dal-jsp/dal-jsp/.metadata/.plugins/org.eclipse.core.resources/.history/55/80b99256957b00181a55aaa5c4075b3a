@@ -1,0 +1,6 @@
+package com.dataapplab.spring.basic.dessignpattern.frontcontroller;
+
+
+public @interface BugReport {
+
+}

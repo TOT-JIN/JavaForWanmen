@@ -1,0 +1,52 @@
+package com.dataapplab.spring.basic.dessignpattern.frontcontroller;
+
+import java.lang.annotation.Annotation;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+import org.reflections.Reflections;
+
+public class AnnotationFrontController {
+
+	  private static Map<String, Class> contrallorMap;
+	  
+	  static AnnotationFrontController(){
+		  this.contrallorMap =  new HashMap<String, Class>();
+		  Reflections reflections = new Reflections("com.dataapplab.spring.basic.dessignpattern.frontcontroller");    
+		  Set<Class<? extends Command>> classes = reflections.getSubTypesOf(Command.class);
+		  for(Class item : classes) {		
+				System.out.println("Found Class Name : " + item.getName());
+				for (Annotation annotation : item.getDeclaredAnnotations()) {
+				    if( annotation.annotationType() == Dalcontroller.class){
+				    	contrallorMap.put(((Dalcontroller)annotation).value(), item);
+						System.out.println("Loading Controller : " + item.getName());				    	
+				    }
+				}
+		 }	  
+	  }
+
+	  public void handleRequest(String request) {
+	    Command command = getCommand(request);
+	    command.process();
+	  }
+
+	  private Command getCommand(String request) {
+	    Class commandClass = getCommandClass(request);
+	    try {
+	      return (Command) commandClass.newInstance();
+	    } catch (Exception e) {
+	      throw new ApplicationException(e);
+	    }
+	  }
+
+	  private static Class getCommandClass(String request) {
+	    Class result;
+	    try {
+	      result = contrallorMap.get("request");
+	    } catch (ClassNotFoundException e) {
+	      result = UnknownCommand.class;
+	    }
+	    return result;
+	  }
+	}

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.dataapplab.springboot.product.CategoryMapper">
+	
+	<resultMap type="Product" id="ProductDetailResult">
+  		<id property="id" column="product_id"/>
+		<result property="name" column="product_name"/>
+		<result property="detail" column="detail"/>
+		<result property="imageUrl" column="image_url"/>
+	    <association property="category" javaType="Category">
+	      		<id property="id" column="category_id"/>
+				<result property="name" column="category_name"/>
+	    </association>	
+  		<collection property="skus" ofType="ProductSKU" >
+  		  		<id property="id" column="sku_id"/>
+  				<result property="skuName" column="sku_name"/>
+  				<result property="skuNo" column="sku_no"/>
+  				<result property="basePrice" column="base_price"/>
+  				<result property="status" column="sku_status"/>
+  		  		<collection property="properties" ofType="ProductSKUValue" >
+				    <id property="id" column="sku_value_id"/>
+				    <association property="variant"  javaType="Variant">
+				  		<id property="id" column="variant_id"/>
+						<result property="name" column="variant_name"/>
+				    </association>	
+	    			<association property="variantOptions" javaType="VariantOptions" >
+				  		<id property="id" column="variant_options_id"/>
+						<result property="value" column="value"/>	    			
+	    			</association>	  		  		
+		  		</collection>   		
+  		</collection>  				
+  	</resultMap>
+  	
+	<resultMap type="Product" id="ProductResult">
+  		<id property="id" column="product_id"/>
+		<result property="name" column="product_name"/>
+		<result property="detail" column="detail"/>
+		<result property="imageUrl" column="image_url"/>
+		<result property="status" column="status"/>
+		<result property="createDate" column="create_date"/>
+		<result property="modifiedDate" column="modified_date"/>
+  	</resultMap>
+
+	<resultMap type="CategoryHierarchy" id="CategoryHierarchyResult">
+  		<id property="nodeId" column="node_id"/>
+		<result property="name" column="name"/>
+		<result property="length" column="length"/>
+  		<collection property="products" ofType="Product" resultMap="ProductResult" >
+  		</collection>		
+  	</resultMap>  
+
+	<resultMap type="CategoryHierarchy" id="CategoryHierarchyResultWithProducts">
+  		<id property="nodeId" column="node_id"/>
+		<result property="name" column="name"/>
+		<result property="length" column="length"/>
+  		<collection property="products" ofType="Product" resultMap="ProductResult" >
+  		</collection>		
+  	</resultMap>  
+  	
+	<resultMap type="Category" id="CategoryResultWithDescendant">
+  		<id property="id" column="category_id"/>
+		<result property="name" column="category_name"/>
+		<result property="displayOrder" column="display_order"/>	
+		<collection property="descendants" ofType="CategoryHierarchy" resultMap="CategoryHierarchyResult">		
+		</collection>
+  	</resultMap> 
+  	
+	<resultMap type="Category" id="CategoryResultWithAncestor">
+  		<id property="id" column="category_id"/>
+		<result property="name" column="category_name"/>
+		<result property="displayOrder" column="display_order"/>	
+		<collection property="ancestors" ofType="CategoryHierarchy"
+		resultMap="CategoryHierarchyResult">
+		
+		</collection>			
+  	</resultMap> 
+
+	<resultMap type="Category" id="CategoryProductResultWithDescendant">
+  		<id property="id" column="category_id"/>
+		<result property="name" column="category_name"/>
+		<result property="displayOrder" column="display_order"/>	
+		<collection property="descendants" ofType="CategoryHierarchy" resultMap="CategoryHierarchyResultWithProducts">		
+		</collection>
+  	</resultMap> 
+  	  	  	
+	<resultMap type="Category" id="CategoryResult">
+  		<id property="id" column="category_id"/>
+		<result property="name" column="category_name"/>
+		<result property="displayOrder" column="display_order"/>
+		<result property="createDate" column="create_date"/>
+		<result property="modifiedDate" column="modified_date"/>
+  	</resultMap> 
+  	  	  	
+	<resultMap type="Category" id="CategoryResultWithProducts">
+  		<id property="id" column="category_id"/>
+		<result property="name" column="category_name"/>
+		<result property="displayOrder" column="display_order"/>
+		<result property="createDate" column="create_date"/>
+		<result property="modifiedDate" column="modified_date"/>
+  		<collection property="products"  ofType="Product" resultMap="ProductResult" >
+  		</collection>		  		
+  	</resultMap>
+</mapper>

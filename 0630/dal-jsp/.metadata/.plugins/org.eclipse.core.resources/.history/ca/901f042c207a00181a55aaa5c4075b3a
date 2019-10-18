@@ -1,0 +1,8 @@
+package com.dataapplab.spring.basic.springaop;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class OrderDao {
+
+}

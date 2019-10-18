@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+<title>Data Application Lab!!</title>
+</head>
+<body>
+	<p><font color="red">${errorMessage}</font></p>
+	
+    <form action="#" th:action="@{/login}" th:object="${userForm}" method="post">
+        <p>User Name: <input type="text" th:field="*{name}" /></p>
+        <p>Password: <input type="text" th:field="*{password}" /></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+</body>
+</html>

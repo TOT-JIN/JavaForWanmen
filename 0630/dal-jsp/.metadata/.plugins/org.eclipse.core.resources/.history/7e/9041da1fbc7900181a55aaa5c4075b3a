@@ -1,0 +1,10 @@
+package com.dataapplab.spring.basic;
+
+import com.dataapplab.spring.basic.algorithm.*;
+
+public class SpringAlgorithmApplication {
+	public static void main(String[] args){
+		BinarySearchImpl search = new BinarySearchImpl();
+		
+	}
+}

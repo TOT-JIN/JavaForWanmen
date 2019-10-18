@@ -1,0 +1,21 @@
+package com.dataapplab.springboot.controllers;
+
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/big")
+public class HelloController {
+    @GetMapping("/hello")
+    public String hello() {
+        return "<div style='color:red;'>Greetings!</div>";
+    }
+    
+    @GetMapping(value="/{name}/{id}")
+    public String greetingPeople(@PathVariable("name") String name,@PathVariable("id") String id, Model model) {
+        return "name: "+ name + "code: "+id;
+    }
+}

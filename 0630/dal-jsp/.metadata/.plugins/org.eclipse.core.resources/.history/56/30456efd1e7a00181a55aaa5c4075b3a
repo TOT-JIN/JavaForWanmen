@@ -1,0 +1,26 @@
+package com.dataapplab.spring.basic.springaop;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.context.annotation.Configuration;
+
+//AOP
+//Configuration
+@Aspect
+@Configuration
+public class AfterAopAspect {
+	@After(value = "com.in28minutes.spring.aop.springaop.aspect.CommonJoinPointConfig.businessLayerExecution()")
+	public void after(JoinPoint joinPoint) {
+	}
+	
+	@AfterReturning(value = "com.in28minutes.spring.aop.springaop.aspect.CommonJoinPointConfig.businessLayerExecution()", 
+			returning = "result")
+	public void afterReturning(JoinPoint joinPoint, Object result) {
+	}
+	
+	public void after(JoinPoint joinPoint) {
+	}
+	
+}

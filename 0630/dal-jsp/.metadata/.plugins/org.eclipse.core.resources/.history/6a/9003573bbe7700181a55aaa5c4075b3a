@@ -1,0 +1,11 @@
+package com.dataapplab.ecommerce;
+
+import java.io.Serializable;
+
+public class UserBean implements Serializable {
+	private String firstName;
+	private String lastName;
+	private int    age;
+	private String    gender;
+	
+}

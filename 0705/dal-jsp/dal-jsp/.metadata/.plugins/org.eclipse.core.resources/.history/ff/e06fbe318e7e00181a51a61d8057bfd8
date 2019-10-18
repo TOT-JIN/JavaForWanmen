@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+<title>Data Application Lab!!</title>
+</head>
+<body>
+	<p><font color="red">${errorMessage}</font></p>
+	<form:form method="post" modelAttribute="userForm" action="${userActionUrl}">
+		<form:input path="name" type="text" /> 
+		<form:errors path="name" />
+	</form:form>	
+</body>
+</html>

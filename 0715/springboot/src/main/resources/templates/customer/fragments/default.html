@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+  </head>
+  <body>
+    <th:block th:fragment="default-head">
+	 	<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	
+		<title>E-SHOP HTML Template</title>
+	
+		<!-- Google font -->
+		<!--  link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet"-->
+	
+		<!-- Bootstrap -->
+		<link th:href="@{#{web.site.host.url}+'/customer/css/bootstrap.min.css'}" 	 
+		type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	
+		<!-- Slick -->
+		<link th:href="@{#{web.site.host.url}+'/customer/css/slick.css'}" 	  
+		type="text/css" rel="stylesheet" href="css/slick.css" />
+		<link th:href="@{#{web.site.host.url}+'/customer/css/slick-theme.css'}" 	   
+		type="text/css" rel="stylesheet" href="css/slick-theme.css" />
+	
+		<!-- nouislider -->
+		<link th:href="@{#{web.site.host.url}+'/customer/css/nouislider.min.css'}" 	   
+		type="text/css" rel="stylesheet" href="css/nouislider.min.css" />
+	
+		<!-- Font Awesome Icon -->
+		<link th:href="@{#{web.site.host.url}+'/customer/css/font-awesome.min.css'}" 	   
+		rel="stylesheet" href="css/font-awesome.min.css">
+	
+		<!-- Custom stlylesheet -->
+		<link th:href="@{#{web.site.host.url}+'/customer/css/style.css'}" 	   
+		type="text/css" rel="stylesheet" href="css/style.css" />
+	
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+			<![endif]-->
+ </th:block>
+ 
+ <th:block th:fragment="default-script" >
+  	<script th:src="@{#{web.site.host.url}+'/customer/js/jquery.min.js'}" 	  
+	src="js/jquery.min.js"></script>
+	<script th:src="@{#{web.site.host.url}+'/customer/js/bootstrap.min.js'}" 	 
+	src="js/bootstrap.min.js"></script>
+	<script th:src="@{#{web.site.host.url}+'/customer/js/slick.min.js'}" 	 
+	src="js/slick.min.js"></script>
+	<script th:src="@{#{web.site.host.url}+'/customer/js/nouislider.min.js'}" 	 
+	src="js/nouislider.min.js"></script>
+	<script th:src="@{#{web.site.host.url}+'/customer/js/jquery.zoom.min.js'}" 	 
+	src="js/jquery.zoom.min.js"></script>
+	<script th:src="@{#{web.site.host.url}+'/customer/js/main.js'}" 	 
+	src="js/main.js"></script>
+ </th:block>
+	
+  </body>
+</html>

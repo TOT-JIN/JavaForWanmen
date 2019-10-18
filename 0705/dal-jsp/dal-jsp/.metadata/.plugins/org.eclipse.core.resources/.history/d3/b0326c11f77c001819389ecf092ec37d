@@ -1,0 +1,27 @@
+package com.buaa.staticEx;
+
+public class PuTong {
+	public PuTong() {
+		System.out.println("123");/////
+	}
+	{
+		System.out.println("345");
+	}
+	static {
+		System.out.println("789");
+	}
+	public static void test() {////////////
+			System.out.println("abc");////
+	}
+	
+	public static void main(String[] args) {
+		PuTong c1 = new PuTong();
+		test();
+		
+		PuTong c2 = new PuTong();
+		test();
+		
+		PuTong c3 = new PuTong();
+		test();
+	}
+}

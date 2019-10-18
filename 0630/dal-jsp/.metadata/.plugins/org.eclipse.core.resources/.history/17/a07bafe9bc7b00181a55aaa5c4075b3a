@@ -1,0 +1,26 @@
+package com.dataapplab.spring.basic;
+
+import com.dataapplab.spring.basic.algorithm.*;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+/**
+ * 
+ * @author joshuaz
+ * 组装你的Application
+ */
+public class SpringXmlApplication {
+	public static void main(String[] args){
+		try (ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext(
+				"applicationContext.xml")) {
+
+			LOGGER.info("Beans Loaded -> {}", (Object) applicationContext.getBeanDefinitionNames());
+			// [xmlJdbcConnection, xmlPersonDAO]
+
+			XmlPersonDAO personDao = applicationContext.getBean(XmlPersonDAO.class);
+
+			LOGGER.info("{} {}", personDao, personDao.getXmlJdbcConnection());
+		}
+		
+	}
+}

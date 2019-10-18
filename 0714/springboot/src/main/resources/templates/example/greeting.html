@@ -1,0 +1,11 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="#{web.site.title}">DAL</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p th:text="${prefix}+'Hello, ' + ${name} + '!'" />
+    <a th:href="${(#mvc.url('GC#greeting').arg(0,'joshua').arg(1,34)).build()}">hi</a>
+</body>
+</html>

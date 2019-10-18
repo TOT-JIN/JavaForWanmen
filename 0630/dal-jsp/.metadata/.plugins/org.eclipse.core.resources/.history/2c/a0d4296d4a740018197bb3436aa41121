@@ -1,0 +1,7 @@
+package webapp;
+
+import javax.servlet.http.HttpServlet;
+
+public class HtmlServlet extends HttpServlet {
+
+}

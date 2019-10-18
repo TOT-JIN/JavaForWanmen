@@ -1,0 +1,14 @@
+package com.dataapplab.spring.basic.dessignpattern.singleton;
+
+public class EagerInitializedSingleton {
+    
+	//we should avoid the instantiation until unless client calls the getInstance method
+    private static final EagerInitializedSingleton instance = new EagerInitializedSingleton();
+    
+    //private constructor to avoid client applications to use constructor
+    private EagerInitializedSingleton(){}
+
+    public static EagerInitializedSingleton getInstance(){
+        return instance;
+    }
+}

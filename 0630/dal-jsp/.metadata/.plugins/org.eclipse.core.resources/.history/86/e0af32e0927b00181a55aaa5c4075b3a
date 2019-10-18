@@ -1,0 +1,15 @@
+package com.dataapplab.spring.basic.dessignpattern.singleton.frontcontroller;
+/**
+ * 
+ * View for archers.
+ *
+ */
+public class ArcherView implements View {
+  
+  private static final Logger LOGGER = LoggerFactory.getLogger(ArcherView.class);
+
+  @Override
+  public void display() {
+    LOGGER.info("Displaying archers");
+  }
+}

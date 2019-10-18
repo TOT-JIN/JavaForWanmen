@@ -1,0 +1,19 @@
+package com.dataapplab.spring.basic.dessignpattern.frontcontroller;
+
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Method;
+
+public class TestAnnotation {
+	
+	public static void main(String[] args){
+		Class businessLogicClass = CatapultCommand.class;
+
+		for (Annotation annotation : businessLogicClass.getDeclaredAnnotations()) {
+		    System.out.println(annotation.toString());
+		}
+		
+		for(Method method : businessLogicClass.getMethods()) {		
+			System.out.println(" Method Name : " + method.getName());
+		}
+	}
+}

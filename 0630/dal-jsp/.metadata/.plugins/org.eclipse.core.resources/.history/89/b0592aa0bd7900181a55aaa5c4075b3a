@@ -1,0 +1,6 @@
+package com.dataapplab.spring.basic.algorithm;
+import org.springframework.context.annotation.ComponentScan;
+
+public class AlgorithmConfig {
+
+}

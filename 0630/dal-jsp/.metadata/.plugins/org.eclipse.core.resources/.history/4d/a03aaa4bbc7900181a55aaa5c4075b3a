@@ -1,0 +1,12 @@
+package com.dataapplab.spring.basic;
+
+import com.dataapplab.spring.basic.algorithm.*;
+
+public class SpringAlgorithmApplication {
+	public static void main(String[] args){
+		BinarySearchImpl search = new BinarySearchImpl(new QuickSortAlgorithm());
+		
+		int result = search.binarySearch(new int[]{12,,4,6}, 3)
+		
+	}
+}
