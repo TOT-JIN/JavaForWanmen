@@ -4,6 +4,8 @@ public class GlobalVar {
 	double b = 20;
 
 	public static void main(String[] args) {
+		// globalVar 为 GlobalVar类的 对象或 instance实例
+		// new + 构造函数赋初值
 		GlobalVar globalVar = new GlobalVar();
 		System.out.println("全局变量  a = " + globalVar.a);
 		// System.out.println("全局变量  a = " +a); 错误写法

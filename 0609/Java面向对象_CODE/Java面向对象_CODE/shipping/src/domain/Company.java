@@ -9,7 +9,7 @@ public class Company {
 	/**
 	 * @param args
 	 */
-	Set vehicles;  //公司拥有0或者多种交通工具，“has关系”
+	Set<Vehicle> vehicles;  //公司拥有0或者多种交通工具，“has关系”
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 

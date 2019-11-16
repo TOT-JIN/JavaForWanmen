@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b1fe090-267e-4f2e-80e5-87958d3839f5" name="Default Changelist" comment="" />
+    <list default="true" id="3b1fe090-267e-4f2e-80e5-87958d3839f5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../0605/HelloWorld/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../0605/HelloWorld/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../0609/Java面向对象_CODE/Java面向对象_CODE/circle2/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../0609/Java面向对象_CODE/Java面向对象_CODE/circle2/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../0609/Java面向对象_CODE/Java面向对象_CODE/circle2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../0609/Java面向对象_CODE/Java面向对象_CODE/circle2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../0609/Java面向对象_CODE/Java面向对象_CODE/circle2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../0609/Java面向对象_CODE/Java面向对象_CODE/circle2/trunk.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../0605/HelloWorld/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../0605/HelloWorld/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../0605/HelloWorld/src/com/dal/example/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../0605/HelloWorld/src/com/dal/example/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/buaa/dal/basics/GlobalVar.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/buaa/dal/basics/GlobalVar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/buaa/dal/basics/GlobalVar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/buaa/dal/basics/GlobalVar.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,11 +26,16 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1SF0UwPLidzYB1qLYSKWPDgRaoy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.project" />
@@ -35,20 +55,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Circle">
-    <configuration name="App1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="buaa.dal.basics.App1" />
-      <module name="JavaBasics" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="buaa.dal.basics.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.UseIntArray">
     <configuration name="Circle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="buaa.dal.basics.Circle" />
       <module name="JavaBasics" />
@@ -62,8 +69,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FindMinMax" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="buaa.dal.basics.FindMinMax" />
+    <configuration name="GlobalVar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="buaa.dal.basics.GlobalVar" />
       <module name="JavaBasics" />
       <extension name="coverage">
         <pattern>
@@ -75,8 +82,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Unicode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="buaa.dal.basics.Unicode" />
+    <configuration name="LocalVar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="buaa.dal.basics.LocalVar" />
       <module name="JavaBasics" />
       <extension name="coverage">
         <pattern>
@@ -88,8 +95,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VarDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="buaa.dal.basics.VarDemo" />
+    <configuration name="Sum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="buaa.dal.basics.Sum" />
+      <module name="JavaBasics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="buaa.dal.basics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UseIntArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="buaa.dal.basics.UseIntArray" />
       <module name="JavaBasics" />
       <extension name="coverage">
         <pattern>
@@ -103,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UseIntArray" />
+        <item itemvalue="Application.Sum" />
+        <item itemvalue="Application.LocalVar" />
+        <item itemvalue="Application.GlobalVar" />
         <item itemvalue="Application.Circle" />
-        <item itemvalue="Application.FindMinMax" />
-        <item itemvalue="Application.Unicode" />
-        <item itemvalue="Application.VarDemo" />
-        <item itemvalue="Application.App1" />
       </list>
     </recent_temporary>
   </component>
@@ -130,10 +150,25 @@
       <workItem from="1571297608020" duration="48000" />
       <workItem from="1571297789395" duration="1066000" />
       <workItem from="1571311308542" duration="3441000" />
+      <workItem from="1573622808929" duration="1538000" />
+      <workItem from="1573691973900" duration="3690000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
